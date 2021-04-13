@@ -16,7 +16,7 @@ from starlette.requests import Request
 from . import v2
 
 # Initiate Integrator
-COVID_API_V2 = CovidAPIv2Integrator()
+COVID_API_V2 = CovidAPIv2Integrator.get_instance()
 
 
 # Logging
