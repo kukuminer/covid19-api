@@ -12,7 +12,7 @@ from ..integrators import covid_api_v2_integrator
 
 
 # Prepare the model
-INTEGRATOR = covid_api_v2_integrator.CovidAPIv2Integrator()
+INTEGRATOR = covid_api_v2_integrator.CovidAPIv2Integrator.get_instance()
 
 
 # Test Initial attibutes
