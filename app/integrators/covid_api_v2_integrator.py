@@ -9,6 +9,7 @@ from datetime import datetime
 from functools import wraps
 from typing import Any, Dict, List
 
+
 import pandas as pd
 
 from models.base_model import ResponseModel
@@ -24,12 +25,13 @@ from models.covid_api_v2_model import (ActiveModel, ConfirmedModel,
                                          TimeseriesUSDataModel,
                                          TimeseriesUSInfoModel,
                                          TimeseriesUSModel, TotalModel)
+from integrator_interface import IntegratorInterface
 from utils.get_data import (get_data_daily_reports,
                               get_data_daily_reports_us, get_data_lookup_table,
                               get_data_time_series, get_US_time_series)
 
 
-class CovidAPIv2Integrator:
+class CovidAPIv2Integrator(IntegratorInterface):
     """ Covid-19 API v2 methods
         SCHEMA: {
             "data": Any,
