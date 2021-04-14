@@ -46,6 +46,13 @@ class CovidAPIv2Integrator:
             'ts': None
         }
     
+	__INSTANCE = None
+	def get_instance() -> CovidAPIv2Integrator:
+		""" Static access method. """
+		if CovidAPIv2Integrator.__INSTANCE == None:
+			__INSTANCE = CovidAPIv2Integrator()
+		return CovidAPIv2Integrator.__INSTANCE
+	
     def wrap_data(func) -> ResponseModel:
         """ Wrap a result in a schemed data """
         @wraps(func)
