@@ -27,6 +27,7 @@ from models.covid_api_v2_model import (ActiveModel, ConfirmedModel,
 from utils.get_data import (get_data_daily_reports,
                               get_data_daily_reports_us, get_data_lookup_table,
                               get_data_time_series, get_US_time_series)
+from utils.observer import Observer
 
 
 class CovidAPIv2Integrator:
@@ -39,6 +40,9 @@ class CovidAPIv2Integrator:
     """
     def __init__(self) -> None:
         """ Initiate DataFrames """
+		o = Observer()
+		if !O.get_active():
+			print("Database is down! Results may be incorrect")
         self.lookup_table = get_data_lookup_table()
         self.scheme = {
             'data': None,
