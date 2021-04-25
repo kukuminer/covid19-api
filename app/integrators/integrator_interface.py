@@ -5,8 +5,10 @@ AUTHOR: Liran Zheku
 DATE: 13-April-2021
 """
 class IntegratorInterface
-	""" Interface to extend integrators v2 and higher from.
-	Features the minimum expected functions from an integrator """
+	""" 
+	Interface to extend integrators v2 and higher from.
+	Features the minimum expected functions from an integrator 
+	"""
 	
 	def get_time_series(self):
 		pass
@@ -34,3 +36,4 @@ class IntegratorInterface
 		
 	def get_total(self):
 		pass
+
